@@ -28,6 +28,7 @@ $.getJSON(endpoint, function (data) {
                 <div class='beer__name'>${item.name}</div>
                 <div class='beer__tagline'>${item.tagline}</div>
                 <div class='beer__description'>${item.description}</div>
+                  <div class='beer__date'>${item.first_brewed}</div>
                 <div class='beer__food-pairing'>
                     Pair with: ${item.food_pairing.join(', ')}
                 </div>
