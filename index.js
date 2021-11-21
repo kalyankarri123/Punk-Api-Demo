@@ -24,19 +24,33 @@ $.getJSON(endpoint, function (data) {
           <h4 class ="beer__tagline">${item.tagline}</h4>
          
          </div>
-               <div class='beer__content'>
-                <div class='beer__name'>${item.name}</div>
-                <div class='beer__tagline'>${item.tagline}</div>
-                <div class='beer__description'>${item.description}</div>
-                  <div class='beer__date'>${item.first_brewed}</div>
-                <div class='beer__food-pairing'>
-                    Pair with: ${item.food_pairing.join(', ')}
-                </div>
-            </div>
+             
+             <div class ="pop-up">
+          <i class="fa fa-window-close-o" aria-hidden="true"></i>
+            <h3 class ="title">Description</h3>
+            <h2>${item.name}</h2>
+              <p>Tagline: ${item.tagline}</p>
+              <p>Descripition: ${item.description}</p>
+             <p>Date of First Brewed: ${item.first_brewed}</p>
+            <h3 class ="title">Food Pairing</h3>
+              <ul>
+       
+               ${item.food_pairing
+                 .map(ingredient => `<li>${ingredient}</li>`)
+                 .join("")}
+
+              </ul>
+              <button type="button" class="button">Close</button>
+          </div>
         </div>
+
        
             `);
     $(".beers").append(beerHtml);
+
+
+
+
   } // call filtered html with class names
 
 
@@ -44,7 +58,18 @@ $.getJSON(endpoint, function (data) {
   Display(medBeers, "medium");
   Display(strongBeers, "strong"); 
 
+$(".beer img").on("click", function () {
+  $(this).closest(".beer-wrapper").find(".pop-up").show(1000);
+   $(".bg").show(0);
+    
+ 
 
+});
+$(".button").on("click", function () {
+  $(".pop-up").hide(1000);
+    $(".bg").hide(0);
+  
+});
 
   $(".beer").css("display", "none");
   $(".beers .medium").css("display", "block"); // filter beers using tabs
