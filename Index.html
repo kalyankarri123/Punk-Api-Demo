@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="Index.css" type="text/css">
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="src/Index.css" type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<title>Brewdog's</title>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Brewdog's</title>
 
-  </head>
-  <body>
+</head>
 
-<div class="container-fluid">
- 
-  <div class="header">
- <img src="logo.png" class="center" width="150px" height="150px" alt="logo">
- <h1 class="name"> Welcome to Brewdog's</h1>
-</div>
-  
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <img src="src/logo.png" class="center" width="150px" height="150px" alt="logo">
+            <h1 class="name"> Welcome to Brewdog's</h1>
+        </div>
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myidname">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">Find Beer Using alcohol Level</span>
+            </div>
+            <div class="navbar-collapse collapse" id="myidname">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class='tab__item all'>All</a>
+                    </li>
 
-<div class="navbar navbar-inverse" role="navigation">    
-                            <div class="navbar-header">    
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myidname">    
-                                    <span class="icon-bar"></span>    
-                                    <span class="icon-bar"></span>    
-                                    <span class="icon-bar"></span>    
-                                </button>    
-                                <span class="navbar-brand">Find Beer Using alcohol Level</span>    
-                            </div>    
-                            <div class="navbar-collapse collapse" id="myidname">    
-                                <ul class="nav navbar-nav">    
-                                   <li>    
-                                        <a class='tab__item all'>All</a>    
-                                    </li>
-                                    
-                                     <li>    
-                                        <a class='tab__item weak'>Low</a>    
-                                    </li>    
-                                    <li>    
-                                        <a class='tab__item medium active'>Medium</a>    
-                                    </li>    
-                                     
-                                    <li>    
-                                        <a class='tab__item strong'>High</a>    
-                                    </li> 
-                                </ul>    
+                    <li>
+                        <a class='tab__item weak'>Low</a>
+                    </li>
+                    <li>
+                        <a class='tab__item medium active'>Medium</a>
+                    </li>
 
-                            </div> 
-</div>
-  <div class='beers'>
-  </div>
-<div class="card" id="beers">
-  
-</div>
-<div class='bg'></div>
-</div>
+                    <li>
+                        <a class='tab__item strong'>High</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class='beers'>
+        </div>
+        <div class="card" id="beers"></div>
+        <div class='bg'></div>
+    </div>
 </body>
-<script src="Index.js"></script>
+<script src="src/Index.js"></script>
+
 </html>
